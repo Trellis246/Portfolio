@@ -21,10 +21,72 @@
             </nav>
             <div class="header-text">
                 <p>Computer Science Major</p>
-                <h1><i>Hello, I'm Trent</i></h1>
+                <h1><i>Hello, I'm <span>Trent</span></i></h1>
                 <h3>Student at Louisiana State University </h3>
             </div>
         </div>
     </div>
+
+<!--About Page-->    
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="personal-portfolio-img/images/user.png">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>I am currently a senior at Louisiana State University pursuing my Bachelors in Computer Science. I discovered my passion for coding when I questioned what goes on behind the scenes in the video games I enjoyed as a kid. I would always question how games functioned and how they were designed. This same wonder is what led me down the path of computer science and even design as a whole. My hobbies include playing video games, sketching, and exercising. I want to take my passion for not only coding and art, but also my desire to help others and create games and sites that'll bring a smile to users' faces.</p>
+                    
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('clubs')">Clubs</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>Game Development</span><br>Created games in Unity using the C# language</li>
+                            <li><span>App Development</span><br>Collaborated with team to create a Clue-inspired mystery game based on my collge campus</li>
+                            <li><span>IT Services</span><br>Solved computer issues users have had that they couldn't solve themselves</li>
+                            
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>2023 - Current</span><br>ITS Student Worker at Louisiana State University</li>
+                            <li><span>2022 - 2025</span><br>Track Manager at Louisiana State University</li>  
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="clubs">
+                        <ul>
+                            <li>National Society of Black Engineers</li>
+                            <li>Society of Peer Mentors</li>
+                            <li>Game Development Club</li>
+                            <li>Security Society at LSU</li>
+                            <li>LSU CS Council</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+        
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+    
+    </script>
+
     </body>
 </html>
