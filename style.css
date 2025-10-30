@@ -129,7 +129,7 @@ nav ul li a:hover::after{
     position: absolute;
     left: 50%;
     bottom: -8px;
-    transition: width 0.1s ease;
+    transition: width 0.3s ease;
     transform: translateX(-50%);
 }
 
