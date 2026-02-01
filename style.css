@@ -10,6 +10,14 @@ body{
     color: #fff;
 }
 
+a:link {
+    color: white;
+}
+
+a:visited {
+    color: white;
+}
+
 #header{
     width: 100%;
     height: 100vh;
@@ -169,9 +177,165 @@ nav ul li a:hover::after{
     margin-top: 50px;
 }
 
+.project {
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.5s;
+}
+
+
+
+.image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    object-fit: cover;
+    object-position: center;
+    width: 100%;
+    height: cover;
+}
+
+.layer {
+    width: 100%;
+    height: 0;
+    background: linear-gradient(rgba(0,0,0,0.6), #2156dc);
+    border-radius: 10px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 40px;
+    text-align: center;
+    font-size: 14px;
+    transition: height 0.5s;
+}
+
+.layer h3 {
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.project:hover img {
+    transform: scale(1.1);
+}
+
+.project:hover .layer {
+    height: 100%;
+}
+
+.projects-list div {
+    /*background: #262626;*/
+    padding: 20px;
+    font-size: 15px;
+    font-weight: 300;
+    border-radius: 10px;
+}
+
+.projects-list div h2 {
+    font-size: bold;
+    font-size: 30px;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+
 .com-list {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     grid-gap: 40px;
     margin-top: 50px;
+}
+
+.com-list div {
+    background: #262626;
+    padding: 20px;
+    font-size: 15px;
+    font-weight: 300;
+    border-radius: 10px;
+    transition: background 0.5s, transform 0.5s;
+}
+
+.com-list div h2 {
+    font-size: bold;
+    font-size: 30px;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+
+.com-list div:hover{
+    background: #5887ff;
+    transform: translateY(-10px);
+}
+
+.contact-left {
+    flex-basis: 35%;
+}
+
+.contact-right {
+    flex-basis: 60%;
+}
+
+.contact-left p {
+    margin-top: 30px;
+}
+
+.btn {
+    display: block;
+    margin: 50px auto;
+    width: fit-content;
+    border: 1px solid #2156dc;
+    padding: 14px 50px;
+    border-radius: 6px;
+    text-decoration: none;
+    color: #fff;
+}
+
+.btn.btn2 {
+    display: inline-block;
+    background: #2156dc;
+}
+
+.contact-right form {
+    width: 100%;
+}
+
+form input, form textarea {
+    width: 100%;
+    border: 0;
+    outline: none;
+    background: #262626;
+    padding: 15px;
+    margin: 15px 0;
+    color: white;
+    font-size: 18px;
+    border-radius: 6px;
+}
+
+form btn2 {
+    padding: 14px 60px;
+    font-size: 18px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+.social-icons {
+    text-decoration: none;
+    color: #fff;
+}
+
+.copyright {
+    width: 100%;
+    text-align: center;
+    padding: 25px 0;
+    background: #262626;
+    font-weight: 300;
+    margin-top: 20px;
+}
+
+.copyright i{
+    color: #2156dc;
 }
